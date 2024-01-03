@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    # 这里同之前写法不一样，因为默认是找 Dockerfile 文件的
+    # 由于我们的文件名不一样，所以要手动配置
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/app/node_modules
+      - .:/usr/app 
