@@ -11,10 +11,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
-  app: "docker-react"
-  env: "Docker-react-env"
+  app: "docker"
+  env: "Docker-env"
   bucket_name: "elasticbeanstalk-us-east-2-992382645187"
-  bucket_path: "docker-react"
+  bucket_path: "docker"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
@@ -22,4 +22,4 @@ deploy:
   skip_cleanup: true
   #secret_access_key: "$AWS_SECRET_KEY"
 
-#http://docker-react-env.eba-trm667in.us-east-2.elasticbeanstalk.com
+#Docker-env.eba-gpm4dcvf.us-east-2.elasticbeanstalk.com
